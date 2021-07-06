@@ -8,10 +8,11 @@ To change keyboard layout
 sudo apt install i3blocks
 
 # Save layout
-i3-msg "workspace 2: Programming; append_layout /home/alonzo/.config/i3/layouts/programming.json"
+i3-save-tree --workspace "1: Navigation" > ~/Scripts/navigation.json
 
 # Load layout
 i3-msg "workspace 1: Navigation; append_layout /home/alonzo/.config/i3/layouts/workspace-1.json"
+i3-msg "workspace 2: Programming; append_layout /home/alonzo/.config/i3/layouts/programming.json"
 
 # Rearrange
 ```bash
