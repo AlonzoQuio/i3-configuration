@@ -14,6 +14,7 @@ i3-msg "workspace 2: Programming; append_layout /home/alonzo/.config/i3/layouts/
 i3-msg "workspace 1: Navigation; append_layout /home/alonzo/.config/i3/layouts/workspace-1.json"
 
 # Rearrange
+```bash
 function apply-layout-to-workspace
   i3-msg append_layout ~/.config/i3/layouts/$argv.json
   sleep 0.05
@@ -22,12 +23,13 @@ function apply-layout-to-workspace
     sleep 0.05
   end
 end
-
+```
 
 https://www.reddit.com/r/i3wm/comments/808685/create_your_own_i3_layouts_that_are_actually/
 
 
 # Swap workspaces
+```bash
 #!/usr/bin/env bash
 # requires jq
 
@@ -42,6 +44,7 @@ while read -r name current_workspace; do
     i3-msg workspace "${current_workspace}"
     i3-msg move workspace to output right   
 done
+```
 
 # GMRUN
 edit 
@@ -55,10 +58,11 @@ ibus-setup
 
 
 # Solve opera problems
+```console
 curl -L -O https://github.com/iteufel/nwjs-ffmpeg-prebuilt/releases/download/0.47.2/0.47.2-linux-x64.zip
 unzip 0.47.2-linux-x64.zip
 sudo mv libffmpeg.so /usr/lib/x86_64-linux-gnu/opera/
-
+```
 https://forums.opera.com/topic/34659/opera-linux-browser-h-264-support-through-x264-open-source-codec/14
 
 # Set theme using gtk3
